@@ -4,7 +4,7 @@ num_unique_chars = len(set(name))
 
 if num_unique_chars % 2 == 0:
     # even number
-    print("she")
+    print("girl")
 else:
     # even number
-    print("he")    
+    print("boy")    
