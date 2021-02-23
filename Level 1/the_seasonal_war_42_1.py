@@ -1,10 +1,10 @@
-# TO BE CONTINUED
-
 import numpy as np
 
 # reading the input file
-with open('../input/sample-text-file/text_file_42.txt', 'r') as f:
-    text = f.read().split('\n')
+text_file_name = input()
+
+with open(text_file_name, 'r') as reader:
+    text = reader.read().split('\n')
 
 # getting images dimensions, and pixels into separate lists
 img_dims, img_pixels = list(), list()
@@ -30,18 +30,18 @@ valid_dy = [0, 1, 1, 1, 0, -1, -1, -1]
 def valid(i, j, n):
     return (i >= 0 and j >= 0  and i < n and j < n)
 
-def check_eagle(i, j, n):
+def check_eagle(ii, jj, n):
 
-    if seen[i][j]:
-        return
-
-    seen[i][j] = 1
+    seen[ii][jj] = 1
 
     for idx in range(8):
-        dx = i + valid_dx[idx]
-        dy = j + valid_dy[idx]
-        if valid(dx, dy, n):
+        dx = ii + valid_dx[idx]
+        dy = jj + valid_dy[idx]
+        if valid(dx, dy, n) and (seen[dx][dy] == 0) and (int(img[dx][dy]) == 1):
+
             check_eagle(dx, dy, n)
+
+output_text = ""
 
 for idx, img in enumerate(img_pixels):
     num_eagles = 0
@@ -49,6 +49,12 @@ for idx, img in enumerate(img_pixels):
     seen = np.zeros((img_dim, img_dim))
     for i in range(img_dim):
         for j in range(img_dim):
-            if img[i][j] == 1:
+            if (int(img[i][j]) == 1) and (seen[i][j] == 0):
+
                 check_eagle(i, j, img_dim)
                 num_eagles += 1
+
+    output_text += f"Image number {idx+1} contains {num_eagles} war eagles.\n"
+
+with open('output.txt', 'w') as writer:
+    text = writer.write(output_text)
