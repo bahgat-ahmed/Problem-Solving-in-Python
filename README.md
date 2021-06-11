@@ -20,4 +20,4 @@ The point of having more than one solution is that just solving the problem on m
 
 >In some problems there is no **number2** found, and that is mostly because I didn't find a better solution than the first one I submitted.
 
-Moreover, I was practicing in this [Kaggle Notebook](https://www.kaggle.com/bahgat94/problem-solving-level-1) to test my answers in the **Level 1** Folder's problems. However, while practicing **AlgoExpert** problems I tested them on the [AlgoExpert](https://www.algoexpert.io/product) platform, and locally.
+Moreover, I was practicing in this [Kaggle Notebook](https://www.kaggle.com/bahgat94/problem-solving-level-1) to test my answers in the **Level 1** Folder's problems. However, while practicing **AlgoExpert** problems I tested them on the [AlgoExpert](https://www.algoexpert.io/product)'s platform, and locally.
