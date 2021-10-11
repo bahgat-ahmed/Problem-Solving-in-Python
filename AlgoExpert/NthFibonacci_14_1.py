@@ -1,3 +1,4 @@
+# recursive solution
 # O (2^n) time | O(n) space - where n is the input number
 def getNthFib(n):
     if n < 3:
