@@ -2,11 +2,11 @@
 
 def insertionSort(array):
     for i in range(1, len(array)):
-		j = i - 1
-		while j >= 0 and array[j] > array[j+1]:
-			swap(j, array)
-			j -= 1
-	return array
+	j = i - 1
+	while j >= 0 and array[j] > array[j+1]:
+		swap(j, array)
+		j -= 1
+    return array
 
 
 def swap(j, array):
